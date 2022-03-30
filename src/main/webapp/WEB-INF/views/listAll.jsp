@@ -13,7 +13,7 @@
 <meta charset="EUC-KR">
 <title>게시판 목록</title>
 </head>
-
+<form action="regist" method="get">
 <body>
 	<table border='1' width='880'>
 		<tr>
@@ -40,7 +40,7 @@
   		<c:forEach items="${list}" var="boardVO">
 			<tr>
 				<td>${boardVO.bno}</td>
-				<td>${boardVO.title}</td>
+				<td><a href='/read?bno=${boardVO.bno}'>${boardVO.title}</td>
 				<td>${boardVO.writer}</td>
 	        	<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" /> </td>
 	        	<td><span class="badge bg-red">${boardVO.viewcnt}</span></td>
@@ -57,5 +57,5 @@
 
 	
 </body>
-
+</form>
 </html>

@@ -13,15 +13,29 @@ public class TestService {
 	@Autowired
 	private BoardDAOImpl dao;
 	
-	public List<BoardVO> listAll() throws Exception{
-		System.out.println(">>>>>>>>>>>>>>>>>TestService");
-		System.out.println(dao);
-		return dao.listAll();
+	public void regist(BoardVO board) throws Exception {
+		// TODO Auto-generated method stub
+		dao.create(board);
 	}
-	
+
 	public BoardVO read(Integer bno) throws Exception {
 		// TODO Auto-generated method stub
 		return dao.read(bno);
+	}
+
+	public void modify(BoardVO board) throws Exception {
+		// TODO Auto-generated method stub
+		dao.update(board);
+	}
+
+	public void remove(Integer bno) throws Exception {
+		// TODO Auto-generated method stub
+		dao.delete(bno);
+	}
+
+	public List<BoardVO> listAll() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.listAll();
 	}
 	
 }
