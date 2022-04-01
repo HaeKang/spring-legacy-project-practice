@@ -1,4 +1,4 @@
-package test;
+package com.sample.test;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sample.domain.BoardVO;
 import com.sample.persistence.BoardDAOImpl;
+
 
 @Service
 public class TestService {

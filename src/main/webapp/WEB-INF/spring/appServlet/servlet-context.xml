@@ -21,11 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-
-	<beans:bean id="testService" class="test.TestService"/>
-	<beans:bean id="BoardDAOImpl" class="com.sample.persistence.BoardDAOImpl" />
 	
-	<context:component-scan base-package="com.sample.controller" />
+	<context:component-scan base-package="com.sample" />
 	
 	
 	

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sample.domain.BoardVO;
+import com.sample.test.TestService;
 
 /**
  * Handles requests for the application home page.
@@ -27,7 +28,7 @@ public class HomeController {
 //	private BoardService boardservice;
 	
 	@Autowired
-	private test.TestService testservice;
+	private TestService testservice;
 	
 	
 	/**
@@ -93,6 +94,5 @@ public class HomeController {
 		testservice.remove(bno);
 		return "redirect:/listAll";
 	}
-	
 	
 }
